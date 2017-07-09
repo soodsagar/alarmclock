@@ -1,0 +1,24 @@
+{
+  "name": "alarmclock",
+  "version": "1.0.0",
+  "description": "A Simple Alarm Clock in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass sass/style.scss css/style.css",
+    "watch-css": "node-sass -w sass/style.scss css/style.css",
+    "start": "npm run build-css && http-server -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soodsagar/alarmclock.git"
+  },
+  "dependencies": {
+    "node-sass": "^3.13.1"
+  },
+  "author": "Sagar Sood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soodsagar/alarmclock/issues"
+  },
+  "homepage": "https://github.com/soodsagar/alarmclock#readme"
+}
