@@ -10,18 +10,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
   <div class="main-container">
-     hello world 
+    <div id="alert" class="alert"></div>
+    <div class="time-container">
+     <div class="date-container">
+       <div id="weekday" class="weekday"></div>
+       <div id="date" class="date"></div>
+       <div style="clear: both"></div>
+       <hr />
+     </div>
+     <div id="time" class="time">
+       <span id="time-hour" class="time-hour"></span>
+       <span id="time-min" class="time-min"></span>
+       <span id="time-period" class="time-period"></span>
+     </div>
+
+     <div id="set-alarm-button" class="set-alarm-button">ADD ALARM</div>
+     <div id="set-alarm-options" class="set-alarm-options">
+       <select id="set-alarm-hour"></select>
+       <select id="set-alarm-min"></select>
+       <select id="set-alarm-period">
+         <option value="AM">AM</option>
+         <option value="PM">PM</option>
+       </select>
+       <div id="set-alarm-cancel" class="set-alarm-cancel">
+         <i class="fa fa-close"></i>
+       </div>
+       <div id="set-alarm-confirm" class="set-alarm-confirm">
+         <i class="fa fa-check"></i>
+       </div>
+     </div>
+    </div>
+
+    <div id="alarm-list" class="alarm-list"></div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+  <script src="scripts/Clock.js"></script>
+  <script src="scripts/Alarm.js"></script>
   <script src="scripts/app.js"></script>
 </body>
 </html>
