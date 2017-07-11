@@ -17,38 +17,33 @@
   <div class="main-container">
     <div id="alert" class="alert"></div>
     <div class="time-container">
-     <div class="date-container">
-       <div id="weekday" class="weekday"></div>
-       <div id="date" class="date"></div>
-       <div style="clear: both"></div>
-       <hr />
-     </div>
-     <div id="time" class="time">
-       <span id="time-hour" class="time-hour"></span>
-       <span id="time-min" class="time-min"></span>
-       <span id="time-period" class="time-period"></span>
-     </div>
-
-     <div id="set-alarm-button" class="set-alarm-button">ADD ALARM</div>
-     <div id="set-alarm-options" class="set-alarm-options">
-       <select id="set-alarm-hour"></select>
-       <select id="set-alarm-min"></select>
-       <select id="set-alarm-period">
-         <option value="AM">AM</option>
-         <option value="PM">PM</option>
-       </select>
-       <div id="set-alarm-cancel" class="set-alarm-cancel">
-         <i class="fa fa-close"></i>
-       </div>
-       <div id="set-alarm-confirm" class="set-alarm-confirm">
-         <i class="fa fa-check"></i>
-       </div>
-     </div>
+      <div class="seconds-progress" id="seconds-progress"></div>
+      <div class="date-container">
+        <div id="weekday" class="weekday"></div>
+        <div id="date" class="date"></div>
+        <div style="clear: both"></div>
+        <hr />
+      </div>
+      <div id="time" class="time">
+        <span id="time-hour" class="time-hour"></span>
+        <span id="time-min" class="time-min"></span>
+        <span id="time-period" class="time-period"></span>
+      </div>
+      <div id="set-alarm-button" class="set-alarm-button">ADD ALARM</div>
+      <div id="set-alarm-options" class="set-alarm-options">
+        <select id="set-alarm-hour"></select>
+        <select id="set-alarm-min"></select>
+        <select id="set-alarm-period">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+        <div id="set-alarm-confirm" class="set-alarm-confirm">
+          <i class="fa fa-check"></i>
+        </div>
+      </div>
     </div>
-
     <div id="alarm-list" class="alarm-list"></div>
   </div>
-
 
   <script src="scripts/Clock.js"></script>
   <script src="scripts/Alarm.js"></script>

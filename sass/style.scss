@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
 
+// VARIABLES
+// Color
 $color-white: #ffffff;
 $color-black: #000000;
 $color-gray: #878787;
-
 $color-theme: #1ABC9C;
 $color-carrot: #E67E22;
-
+// Size
 $font-thin: 100;
 $font-heavy: 900;
+$bar-height: 45px;
+$content-width: 600px;
+// Defaults
+$default-box-shadow: 0 1px 20px 0 $color-gray;
 
 body, html {
   font-family: 'Lato', sans-serif;
@@ -24,12 +29,18 @@ body, html {
   height: 100%;
   padding-top: 150px;
 
+  .seconds-progress {
+    width: 0;
+    background: $color-theme;
+    height: 5px;
+  }
+
   .time-container {
     background: $color-white;
     margin: auto;
-    width: 600px;
+    width: $content-width;
     height: 310px;
-    box-shadow: 0 1px 20px 0 $color-gray;
+    box-shadow: $default-box-shadow;
 
     .date-container {
       color: lighten( $color-gray, 20% );
@@ -46,7 +57,7 @@ body, html {
     .time {
       text-align: center;
       color: $color-black;
-      margin: 19px 0;
+      margin: 16px 0;
 
       .time-hour, .time-min {
         font-size: 150px;
@@ -65,11 +76,10 @@ body, html {
 
     .set-alarm-button, .set-alarm-options {
       width: 100%;
-      line-height: 45px;
+      line-height: $bar-height;
       text-align: center;
     }
     .set-alarm-button {
-      display: block;
       background: $color-theme;
       color: $color-white;
       cursor: pointer;
@@ -81,33 +91,22 @@ body, html {
     }
 
     .set-alarm-options {
-      background: lighten( $color-gray, 15% );
+      background: lighten( $color-gray, 17.5% );
       display: none;
     }
 
-    .set-alarm-confirm, .set-alarm-cancel {
-      width: 75px;
-      line-height: 45px;
+    .set-alarm-confirm {
+      width: 150px;
+      line-height: $bar-height;
+      background: lighten( $color-theme, 4% );
       cursor: pointer;
       display: inline-block;
       margin: 0;
       float: right;
       color: $color-white;
-    }
-
-    .set-alarm-confirm {
-      background: $color-theme;
 
       &:hover {
         background-color: darken( $color-theme, 7% );
-        transition: 0.5s;
-      }
-    }
-    .set-alarm-cancel {
-      background: $color-carrot;
-
-      &:hover {
-        background-color: darken( $color-carrot, 7% );
         transition: 0.5s;
       }
     }
@@ -115,37 +114,31 @@ body, html {
 
   .alarm-list {
     margin: 80px auto;
-    width: 600px;
+    width: $content-width;
 
     .alarm-tile {
       margin: 15px 0;
       background: $color-theme;
       color: $color-white;
-      height: 45px;
-      line-height: 45px;
+      height: $bar-height;
+      line-height: $bar-height;
       padding: 0 5px 0 30px;
-      box-shadow: 0 1px 20px 0 $color-gray;
+      box-shadow: $default-box-shadow;
 
       .alarm-time {
         float: left;
-      }
-      .alarm-delete {
-        float: right;
-        width: 75px;
-        text-align: center;
-        cursor: pointer
       }
     }
   }
 
   .alert {
     margin: 20px auto;
-    width: 600px;
+    width: $content-width;
     background: $color-carrot;
     color: $color-white;
-    box-shadow: 0 1px 20px 0 $color-gray;
-    height: 45px;
-    line-height: 45px;
+    box-shadow: $default-box-shadow;
+    height: $bar-height;
+    line-height: $bar-height;
     visibility: hidden;
     text-align: center;
   }
@@ -158,11 +151,6 @@ body, html {
    height: 28px;
    margin: 0 10px;
    font-size: 20px;
-  }
-
-  .fa-trash-o:hover {
-    color: darken( $color-white, 50% );
-    transition: 0.5s;
   }
 
 }

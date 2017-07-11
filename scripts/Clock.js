@@ -1,14 +1,7 @@
-const weekDays = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-  "Friday", "Saturday"
-];
 
-const monthNames = [ "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-];
-
-const hoursInDay = 24;
-const minsInHour = 60;
-
+/**
+ * The main clock class that creates time object
+**/
 function Clock() {
   this.fullDate = new Date();
   var hour = this.fullDate.getHours();
@@ -34,6 +27,10 @@ function Clock() {
 
 }
 
+/**
+ * Sets up the hours and mins options in <select> dropdown
+ * for a new alarm.
+**/
 Clock.prototype.setUpHoursMins = function() {
   var hourSelect = document.getElementById( "set-alarm-hour" );
   var minSelect = document.getElementById( "set-alarm-min" );
