@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+// VARIABLES
+// Color
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #878787;
+$color-theme: #1ABC9C;
+$color-carrot: #E67E22;
+// Size
+$font-thin: 100;
+$font-heavy: 900;
+$bar-height: 45px;
+$content-width: 600px;
+// Defaults
+$default-box-shadow: 0 1px 20px 0 $color-gray;
+
+body, html {
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+.main-container {
+  background-image: url( "../images/background.jpg" );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding-top: 150px;
+
+  .seconds-progress {
+    width: 0;
+    background: $color-theme;
+    height: 5px;
+  }
+
+  .time-container {
+    background: $color-white;
+    margin: auto;
+    width: $content-width;
+    height: 310px;
+    box-shadow: $default-box-shadow;
+
+    .date-container {
+      color: lighten( $color-gray, 20% );
+      margin: 0 50px;
+      padding-top: 20px;
+      .weekday {
+        float: left;
+      }
+      .date {
+        float: right;
+      }
+    }
+
+    .time {
+      text-align: center;
+      color: $color-black;
+      margin: 16px 0;
+
+      .time-hour, .time-min {
+        font-size: 150px;
+      }
+      .time-period {
+        font-size: 30px;
+        font-weight: $font-thin;
+      }
+      .time-hour {
+        font-weight: $font-heavy;
+      }
+      .time-min {
+        font-weight: $font-thin;
+      }
+    }
+
+    .set-alarm-button, .set-alarm-options {
+      width: 100%;
+      line-height: $bar-height;
+      text-align: center;
+    }
+    .set-alarm-button {
+      background: $color-theme;
+      color: $color-white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken( $color-theme, 7% );
+        transition: 0.5s;
+      }
+    }
+
+    .set-alarm-options {
+      background: lighten( $color-gray, 17.5% );
+      display: none;
+    }
+
+    .set-alarm-confirm {
+      width: 150px;
+      line-height: $bar-height;
+      background: lighten( $color-theme, 4% );
+      cursor: pointer;
+      display: inline-block;
+      margin: 0;
+      float: right;
+      color: $color-white;
+
+      &:hover {
+        background-color: darken( $color-theme, 7% );
+        transition: 0.5s;
+      }
+    }
+  }
+
+  .alarm-list {
+    margin: 80px auto;
+    width: $content-width;
+
+    .alarm-tile {
+      margin: 15px 0;
+      background: $color-theme;
+      color: $color-white;
+      height: $bar-height;
+      line-height: $bar-height;
+      padding: 0 5px 0 30px;
+      box-shadow: $default-box-shadow;
+
+      .alarm-time {
+        float: left;
+      }
+    }
+  }
+
+  .alert {
+    margin: 20px auto;
+    width: $content-width;
+    background: $color-carrot;
+    color: $color-white;
+    box-shadow: $default-box-shadow;
+    height: $bar-height;
+    line-height: $bar-height;
+    visibility: hidden;
+    text-align: center;
+  }
+
+  hr {
+    border-top: lighten( $color-gray, 20% );
+  }
+
+  select {
+   height: 28px;
+   margin: 0 10px;
+   font-size: 20px;
+  }
+
+}
